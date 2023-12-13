@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para ajusar a móviles-->
+    <title>BALANCE FINANCIERO</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+</head>
+<body>
+    <h1>BALANCE FINANCIERO</h1>
+    <br>
+    <h2>El balance total de las operaciones es:</h2>
+    <h1>$ {{ total }}</h1>
+    <br>
+    <button class="boton" id="botonInicio">Ir al inicio</button>
+
+    <script src="{{ url_for('static',filename='js/balance.js') }}"></script>
+</body>
+</html>

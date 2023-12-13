@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para ajusar a móviles-->
+    <title>EDITAR MOVIMIENTOS</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+</head>
+<body>
+    <h1>Editar movimientos:</h1>
+
+    <div class="scrollable-container">
+        <ul>
+        {% for movimiento in movimientos %}
+        <li class="{{ 'ingreso' if movimiento.tipo == 'Ingreso' else 'gasto' }}">
+                <span class="fecha">{{ movimiento.fecha }}</span>
+                $
+                <span class="monto">{{ movimiento.monto }}</span>
+                <span class="nombre">{{ movimiento.nombre }}</span>
+                <button class="botonEditar" data-id="{{ movimiento.id }}">Editar</button>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <br>
+    <button class="boton" id="botonInicio">Ir al inicio</button>
+
+    <script src="{{ url_for('static',filename='js/editar.js') }}"></script>
+</body>
+</html>

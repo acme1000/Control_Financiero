@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para ajusar a móviles-->
+    <title>Añadir movimiento</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+</head>
+<body>
+    <h1>Añadir un movimiento:</h1>
+    <div id="switch">
+        <p>Selecciona el tipo de movimiento:</p>
+        <button class="botonsw" id="botonIngreso" onclick="activarBoton('Ingreso')">Ingreso</button>
+        <button class="botonsw" id="botonGasto" onclick="activarBoton('Gasto')">Gasto</button>
+    </div>
+
+    <form id="formularioMovimiento" method="post" onsubmit="return validarFormulario(event)">
+        <label for="nombre">Concepto:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="(máx. 20 caracteres)" maxlength="20"><br>
+        <label for="monto">Monto:</label>
+        <input type="text" id="monto" name="monto" required pattern="\d{1,9}(\.\d{1,2})?" title="Introduce un número con hasta 7 dígitos y 2 decimales" maxlength="12">
+        <label for="descr">Descripción:</label>
+        <input type="text" id="descr" name="descr" placeholder="(opcional)" maxlength="38"><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required><br>
+        
+        <input type="submit" value="Añadir">
+    </form>
+    <br>
+    <button class="boton" id="botonInicio">Ir al inicio</button>
+
+    <script src="{{ url_for('static', filename='js/anadir.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color:indigo;
+    text-align: center;
+}
+
+h2 {
+    color:rgb(62, 47, 79);
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.medio_visible {
+    text-align: center;
+    color:darkgray;
+}
+
+/* Estilos para los Botones */
+.boton {
+    display: block;
+    margin: 15px auto;
+    padding: 10px auto;
+    width: 270px;  /* Ancho fijo */
+    height: 60px;  /* Altura fija */
+    background-color:indigo;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.boton:hover {
+    background-color: rgb(74, 0, 124);
+}
+
+/* Estilos para Formularios */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+input[type="submit"] {
+    background-color: indigo;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color:rgb(74, 0, 124);
+}
+
+
+/* Estilos para Listas */
+.scrollable-container {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Permite un desplazamiento táctil más fluido en iOS */
+    max-height: 350px;
+    background-color:rgb(235, 235, 235);
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos li se apilen verticalmente */
+    padding: 0;
+    margin: 0 auto;
+    width: 850px; /* Establece un ancho mínimo para la lista */
+}
+
+li {
+    font-size: 18px;
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li > span {
+    padding: 0 10px;
+    white-space: nowrap; /* Esto evita que el contenido se envuelva */
+    overflow: hidden; /* Oculta el contenido que excede el ancho del span */
+    text-overflow: ellipsis; /* Añade "..." si el contenido excede el ancho */
+}
+
+
+.fecha {
+    width: 14%;
+}
+.nombre {
+    width: 25%;
+}
+.monto {
+    width:17%;
+    text-align: right;
+}
+.descr {
+    width: 43%;
+}
+
+.ingreso {
+    background-color: #d4edd7;
+}
+
+.gasto {
+    background-color: #f8d7da;
+}
+
+.botonEditar {
+    padding: 5px 5px;
+    font-size:16px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color:rgb(230, 230, 230);
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: none;
+    margin-bottom: none;
+    width:30%;
+}
+
+#botonSoon {
+    background-color: dimgray;
+}
+
+/* PARA EL SWITCH */
+#switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botonsw {
+    padding: 10px 10px;
+    margin-top: 5px;
+    width: 210px;
+    height: 40px; 
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color:gainsboro;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#botonIngreso.activado {
+    background-color:rgb(0, 128, 26);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#botonGasto.activado {
+    background-color: rgb(128, 0, 0);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

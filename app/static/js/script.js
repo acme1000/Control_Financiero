@@ -1,0 +1,17 @@
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('botonAnadir').addEventListener('click',function(){
+        window.location.href='/anadir';
+    })
+    document.getElementById('botonMovimientos').addEventListener('click',function(){
+        window.location.href='/ver_movimientos';
+    })
+    document.getElementById('botonEditar').addEventListener('click',function(){
+        window.location.href='/editar';
+    })
+    document.getElementById('botonBalance').addEventListener('click',function(){
+        window.location.href='/balance';
+    })
+    document.getElementById('botonSoon').addEventListener('click',function(){
+        window.location.href='/soon';
+    })
+})

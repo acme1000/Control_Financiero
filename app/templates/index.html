@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Para ajusar a móviles-->
+    <title>CONTROL FINANCIERO</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+</head>
+<body>
+    <h1>CONTROL FINANCIERO</h1>
+    <p class="medio_visible">Por Adrián Cortez</p>
+    <button class="boton" id="botonAnadir">Añadir movimiento</button>
+    <button class="boton" id="botonMovimientos">Ver movimientos</button>
+    <button class="boton" id="botonEditar">Editar movimientos</button>
+    <button class="boton" id="botonBalance">Balance financiero</button>
+    <br>
+    <button class="boton" id="botonSoon">Proximas actualizaciones</button>
+
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    
+</body>
+</html>
